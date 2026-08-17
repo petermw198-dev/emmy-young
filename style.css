@@ -1,0 +1,70 @@
+:root {
+  --primary: #0288d1;
+  --primary-dark: #01579b;
+  --accent: #25D366;
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;}
+body {font-family: 'Arial', sans-serif; color: #333; line-height: 1.7; background: #f8fbff;}
+.container {max-width: 1200px; margin: 0 auto; padding: 60px 20px;}
+.bg-light {background: #e3f2fd;}
+.bg-dark {background: #01579b; color: #fff;}
+.section-title {text-align: center; font-size: 2.5em; color: var(--primary-dark); margin-bottom: 15px; text-transform: uppercase;}
+.section-sub {text-align: center; color: #555; margin-bottom: 40px;}
+
+/* NAVBAR */
+nav {background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;}
+.nav-container {max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;}
+.logo {color: var(--primary-dark); font-size: 1.5em; font-weight: bold;}
+nav ul {list-style: none; display: flex; gap: 25px;}
+nav ul li a {text-decoration: none; color: #333; font-weight: bold; transition: 0.3s;}
+nav ul li a:hover {color: var(--primary);}
+
+/* HERO */
+header {background: linear-gradient(rgba(1,87,155,0.8), rgba(2,136,209,0.8)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600') center/cover; color: #fff; text-align: center; padding: 120px 20px;}
+.hero-content h1 {font-size: 3.2em; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);}
+.hero-content p {font-size: 1.2em; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;}
+.hero-btn {background: var(--accent); color: #fff; padding: 16px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1em; transition: 0.3s;}
+.hero-btn:hover {background: #1ebe5b; transform: scale(1.05);}
+
+/* ABOUT */
+.about-grid {display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;}
+.about-text h3 {color: var(--primary-dark); font-size: 1.8em; margin-bottom: 15px;}
+.about-img img {width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);}
+
+/* PRODUCTS */
+.products {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;}
+.card {background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: 0.3s; border-top: 4px solid var(--primary);}
+.card:hover {transform: translateY(-10px);}
+.card img {width: 100%; height: 250px; object-fit: cover;}
+.card-body {padding: 25px;}
+.card-body h3 {color: var(--primary-dark); margin-bottom: 10px; font-size: 1.3em;}
+.card-body ul {list-style: none; margin: 15px 0;}
+.card-body ul li {margin: 8px 0; padding-left: 20px; position: relative;}
+.card-body ul li:before {content: "✓"; color: var(--accent); position: absolute; left: 0;}
+.price {font-size: 1.6em; font-weight: bold; color: #000; margin: 15px 0;}
+.btn {display: block; background: var(--accent); color: #fff; padding: 14px; border-radius: 8px; text-decoration: none; text-align: center; font-weight: bold; transition: 0.3s;}
+.btn:hover {background: #1ebe5b;}
+
+/* CONTACT */
+.contact-text {text-align: center; font-size: 1.1em; margin-bottom: 30px;}
+.contact-box {background: #fff; color: #222; padding: 40px; border-radius: 15px; text-align: center; max-width: 600px; margin: 0 auto; box-shadow: 0 5px 20px rgba(0,0,0,0.2);}
+.contact-box h3 {font-size: 1.5em; color: var(--primary-dark); margin-bottom: 10px;}
+.btn-big {display: inline-block; background: var(--accent); color: #fff; padding: 18px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; margin-top: 20px; transition: 0.3s;}
+.btn-big:hover {background: #1ebe5b;}
+.white {color: #fff;}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {position: fixed; bottom: 25px; right: 25px; background: var(--accent); color: #fff; padding: 16px 24px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); z-index: 999; transition: 0.3s;}
+.whatsapp-float:hover {transform: scale(1.05);}
+
+/* FOOTER */
+footer {background: #000; color: #ccc; text-align: center; padding: 30px 20px;}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-grid {grid-template-columns: 1fr;}
+  .hero-content h1 {font-size: 2em;}
+  nav ul {display: none;}
+  .section-title {font-size: 1.8em;}
+}
